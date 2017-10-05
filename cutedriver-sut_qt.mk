@@ -53,12 +53,12 @@ endif
 	source $(RVM_HOME)/.rvm/scripts/rvm; \
 	cd $(SOURCE_ROOT)/cutedriver-sut_qt;\
 	set -e;\
-	gem install pkg/*.gem
+	sudo gem install pkg/*.gem
 
 uninstall-cutedriver-sut_qt:
 	source ${HOME}/.rvm/scripts/rvm; \
 	set +e;\
-	gem uninstall cutedriver-qt-sut-plugin -qa --force -x
+	sudo gem uninstall cutedriver-qt-sut-plugin -qa --force -x
 
 clean-cutedriver-sut_qt:
 	rm -rf $(SOURCE_ROOT)/cutedriver-sut_qt/pkg/*
